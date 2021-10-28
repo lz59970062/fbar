@@ -1,0 +1,993 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=1200, initial-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>2021年 TI 杯全国大学生电子设计竞赛仪器设备和主要元器件清单-全国大学生电子设计竞赛培训网</title>  <meta name="keywords" content="" />  <meta name="description" content="" />  <link rel="shortcut icon"  href="https://www.nuedc-training.com.cn/logo.ico">
+  <link rel="stylesheet" href="https://static.nuedc-training.com.cn/css/style3.css?=24">
+  <link rel="stylesheet" href="https://static.nuedc-training.com.cn/css/styleNew.css?=50">
+  <!--<link rel="stylesheet" href="https://static.nuedc-training.com.cn/css/style.min.css?v=16">-->
+  <script src="https://static.nuedc-training.com.cn/js/jquery.min.js"></script>
+  <script src="https://static.nuedc-training.com.cn/js/Validform_v5.3.2_min.js"></script>
+  <link href="https://static.nuedc-training.com.cn/css/swiper.min.css" rel="stylesheet">
+  <script src="https://static.nuedc-training.com.cn/js/swiper.min.js"></script>
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>-->
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+      body {
+        overflow-x: visible
+      }
+    </style>
+	<![endif]-->
+</head>
+<!-- <style>
+  *{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.index-information-box img {
+    left: -220px;
+  }
+</style> -->
+<script>
+$(function(){
+	var a = "https://www.nuedc-training.com.cn/index/mall/sign";
+
+	$(".nav-user-sign").click(function(){
+		if(!$(this).hasClass("active")){
+			$.ajax({
+				type:"GET",
+				url:a,
+				dataType:"json",
+				data:'',
+				async:true,
+				success:function (e) {
+					if(e.status === 1){
+						$(".head-popup").show()
+						$(".popup-main-title").html(e.info)
+						$("#popupNum").html(e.data.sign_count)
+						$(".popup-main-li").each(function(index){
+							if(index < e.data.sign_count){
+								$(this).find(".popup-mainItem-bg").show()
+							}
+						})
+					}
+					if(e.status === 0){
+						$(".head-popup").show()
+						$(".popup-main-title").html(e.info)
+						$("#popupNum").html(e.data.sign_count)
+						$(".popup-main-li").each(function(index){
+							if(index < e.data.sign_count){
+								$(this).find(".popup-mainItem-bg").show()
+							}
+						})
+					}
+					if(e.status === 2){
+							window.location.href = e.data
+					}
+				}
+			})
+		}
+	})
+
+	$("#userBtn").click(function(){
+		$.ajax({
+				type:"GET",
+				url:a,
+				dataType:"json",
+				data:'',
+				async:true,
+				success:function (e) {
+					if(e.status === 1){
+						$(".head-popup").show()
+						$(".popup-main-title").html(e.info)
+						$("#popupNum").html(e.data.sign_count)
+						$(".popup-main-li").each(function(index){
+							if(index < e.data.sign_count){
+								$(this).find(".popup-mainItem-bg").show()
+							}
+						})
+					}
+					if(e.status === 0){
+						$(".head-popup").show()
+						$(".popup-main-title").html(e.info)
+						$("#popupNum").html(e.data.sign_count)
+						$(".popup-main-li").each(function(index){
+							if(index < e.data.sign_count){
+								$(this).find(".popup-mainItem-bg").show()
+							}
+						})
+					}
+					if(e.status === 2){
+							window.location.href = e.data
+					}
+				}
+			})
+	})
+
+	$(".popup-head-close").click(function(){
+		$(".head-popup").hide()
+		window.location.href = window.location.href
+	})
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 200) {
+			$(".nav").addClass("active")
+		} else {
+			$(".nav").removeClass("active")
+		}
+	})
+	  if ($("#searchForm").length) {
+        var $form = $("#searchForm").Validform({
+          tiptype: 4,
+          ignoreHidden: true,
+          ajaxPost: false,
+          beforeSumbmit: function () {
+
+          },
+          callback: function (data) {
+
+          }
+        })
+      }
+      if ($('#bannerWrap').length) {
+        var banner = new window.GZApp.Scroll({
+          mainWrap: '#bannerWrap',
+          auto: true,
+          speed: 0.5,
+          tagWrap: '#bannerTab2'
+        })
+        banner.showHide();
+      }
+})
+</script>
+<!-- 	<div class="tip-pop" style="position: fixed; top: 0px; left: 50%; transform: translate(-50%); width: 1200px; margin: 0px auto; padding: 3px 20px; background-color: #fff7db;color: #555555; text-align: left; font-size: 14px; border-radius: 4px; z-index: 9; border-radius: 6px;box-sizing: border-box;">
+		<p style="font-size: 13px;text-align: center;">全国大学生电子设计竞赛培训网将于2020年5月19日 21:00-23:00 进行升级维护，期间部分功能将会无法使用，给您带来的不便敬请谅解。 <a href="" style="color: #0070cf">查看详情</a>
+		<span class="colse-tip-pop" style="padding-left: 10px; cursor: pointer;">X</span>
+		</p>
+	</div> -->
+<script>
+	$('.colse-tip-pop').click(function () {
+		$('.tip-pop').hide()
+	})
+</script>
+<section class="head-popup">
+	<div class="popup-main">
+			<h2 class="popup-main-title">签到</h2>
+			<div class="popup-main-test">
+				已连续签到&nbsp; <span id="popupNum">0</span> &nbsp;天
+			</div>
+		<ul class="popup-main-ul clearfix">
+							<li class="popup-main-li leftCol" >
+					<p class="popup-main-date">第一天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon.png"/>
+												<p>1赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" >
+					<p class="popup-main-date">第二天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon.png"/>
+												<p>1赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" >
+					<p class="popup-main-date">第三天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon.png"/>
+												<p>1赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" >
+					<p class="popup-main-date">第四天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon.png"/>
+												<p>1赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" >
+					<p class="popup-main-date">第五天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon.png"/>
+												<p>1赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" style="width:144px;">
+					<p class="popup-main-date">第六天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon2.png"/>
+						<img class="popup-mainItem-img" src="https://static.nuedc-training.com.cn/images/double-icon.png"/>						<p>2赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+							<li class="popup-main-li leftCol" style="width:144px;">
+					<p class="popup-main-date">第七天</p>
+					<div class="popup-main-item">
+												<img src="https://static.nuedc-training.com.cn/images/new/HZ-icon2.png"/>
+						<img class="popup-mainItem-img" src="https://static.nuedc-training.com.cn/images/double-icon.png"/>						<p>2赫兹币</p>
+						<div class="popup-mainItem-bg">
+							<span>已签到</span>
+						</div>
+					</div>
+				</li>
+					</ul>
+		<a href="https://www.nuedc-training.com.cn/index/answer/index" target="_blank" class="popup-main-link">前往每周一练，赢取100赫兹币</a>
+		<div class="popup-head-close"></div>
+	</div>
+	<div class="popup-bg"></div>
+</section>
+
+<body style="-webkit-overflow-scrolling: touch;">
+<!--<div class="header-nav-group new-year-head">-->
+<div class="header-nav-group">
+	<header class="header">
+	<div class="container clearfix">
+				<a class="logo" href="https://www.nuedc-training.com.cn/" title="全国大学生电子设计竞赛培训网">
+			<img src="https://res.nuedc-training.com.cn/s/png/2019/01/26/bbs_201901266708.png" alt="全国大学生电子设计竞赛培训网">
+		</a>
+				<div class="header-right">
+			<form id="searchForm" action="https://www.nuedc-training.com.cn/index/search/bbs" class="header-search" method="get" onsubmit="$(this).attr('action', $('#search_type').val());return true;">
+				<span>
+					<select class="header-sel" name="st" id="search_type">
+						<option value="https://www.nuedc-training.com.cn/index/search/bbs" >电赛论坛</option>
+						<option value="https://www.nuedc-training.com.cn/index/search/news" >信息发布</option>
+						<option value="https://www.nuedc-training.com.cn/index/search/training" >培训资源</option>
+					</select>
+				</span>
+				<span class="header-line"></span>
+				<input class="header-text" placeholder="输入您要搜索的关键词" type="search" name="w" id="" datatype="*" nullmsg="请输入搜索内容！" value="">
+				<button class="header-submit" type="submit">搜索</button>
+			</form>
+		</div>
+	</div>
+	</header>
+	<nav class="nav">
+		<div class="container clearfix">
+			<ul class="clearfix leftCol nav-ul">
+				<li class="leftCol">
+					<a href="https://www.nuedc-training.com.cn/" class="nav-link ">首页</a>
+				</li>
+				<li class="leftCol">
+					<a href="https://www.nuedc-training.com.cn/index/news" class="nav-link ">信息发布</a>
+				</li>
+				<li class="leftCol" style="position: relative">
+					<a href="https://www.nuedc-training.com.cn/index/publicity" class="nav-link ">2021国赛专区</a>
+					<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>
+				</li>
+				<li class="leftCol" style="position: relative">
+					<a href="https://bbs.nuedc-training.com.cn"  class="nav-link">电赛论坛</a>
+					<!--<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>-->
+				</li>
+				<li class="leftCol  review-header-li" style="position: relative">
+
+					<a href="javascript:;" class="nav-link ">活动专区
+						<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>
+					</a>
+					<ul class="header-review-list">
+						<li class="header-review-li">
+							<a href="https://www.nuedc-training.com.cn/index/answer_win_gift/april_list" style="padding:18px 0 14px 0;">
+								答题赢礼品
+							</a>
+							<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>
+						</li>
+						<li class="header-review-li"><a href="https://www.nuedc-training.com.cn/index/activity/index">往期活动</a></li>
+					</ul>
+
+					<!--<a href="https://www.nuedc-training.com.cn/index/activity" class="nav-link ">活动专区</a>-->
+				</li>
+				<li class="leftCol" style="position: relative">
+					<a href="https://www.nuedc-training.com.cn/index/video" class="nav-link ">培训资源</a>
+					<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>
+				</li>
+				<!--<li class="leftCol">-->
+					<!--<a href="https://www.nuedc-training.com.cn/index/review" class="nav-link ">往届回顾</a>-->
+				<!--</li>-->
+				<li class="leftCol">
+					<a href="https://www.nuedc-training.com.cn/index/mall" class="nav-link ">兑换商城
+						<!--<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>-->
+					</a>
+				</li>
+								<li class="leftCol review-header-li" style="position: relative">
+					<a href="javascript:;" class="nav-link ">板卡申请
+						<!--<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>-->
+					</a>
+					<ul class="header-review-list">
+						<li class="header-review-li"><a href="https://www.nuedc-training.com.cn/index/evm/index">学生专区</a></li>
+						<li class="header-review-li"><a href="https://www.nuedc-training.com.cn/index/card/index">教师专区</a></li>
+					</ul>
+				</li>
+								 <li class="leftCol">
+					<a href="https://www.nuedc-training.com.cn/mooc/index/index" class="nav-link ">慕课
+						<!--<img width="34" class="nav-ulIcon" src="https://static.nuedc-training.com.cn/images/new/new.png"/>-->
+					</a>
+				</li>
+			</ul>
+			<style>
+				.header-review-list {
+					position: absolute;
+					top: 60px;
+					left: 50%;
+					transform: translate(-50%, 0);
+					width: 110px;
+					background:rgba(255,255,255,1);
+					box-shadow:0px 2px 4px 0px rgba(0,0,0,0.3);
+					z-index: 9;
+					display: none;
+
+				}
+				.header-review-li {
+					padding: 0 0px;
+				}
+				.header-review-li a {
+					display: block;
+					padding: 14px 0;
+					text-align: center;
+					font-size: 14px;
+					border-bottom: 1px solid #D8D8D8;
+					color: #333333;
+				}
+
+				.header-review-li:last-child a {
+					border: 0;
+				}
+				.header-review-li:hover a {
+					color: #4583FF;
+					background-color: #fff;
+				}
+				.review-header-li:hover .header-review-list {
+					display: block;
+				}
+			</style>
+			<div class="nav-user rightCol clearfix">
+				<!-- <a href="http://tj.21dianyuan.com/KJVOXrPl" class="leftCol nav-user-buy" target="_blank" style="margin-right:5px;">
+					<div id="openNewBuy" class="nav-user-buy-wrap hide">
+						<div class="nav-user-buy-link">官方认证购买渠道</div>
+						<button id="closeNewBuy" class="nav-user-buy-btn"></button>
+					</div>
+				</a> -->
+						<div class="nav-nologin rightCol">
+				<a href="https://www.nuedc-training.com.cn/index/login?referer=https://www.nuedc-training.com.cn/index/huodong/chip">登录</a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="https://www.nuedc-training.com.cn/index/register">注册</a>
+			</div>
+						</div>
+		</div>
+	</nav>
+</div>
+  <ul class="leader" style="display: block;bottom:40%;">
+    <li class="leader-item item4">
+      <div class="a">
+		  <div class="leader-item4-hide">
+			  <p class="leader-item4-title">编辑推荐</p>
+			  			  <ul class="leader-item4-ul">
+				  <li class="leader-item4-li"><b>·</b><span><a href="https://www.nuedc-training.com.cn/index/publicity/index" target="_blank">2021年国赛专区</a></span></li>
+			  </ul>
+			  			  <ul class="leader-item4-ul">
+				  <li class="leader-item4-li"><b>·</b><span><a href="https://www.nuedc-training.com.cn/index/news/details/new_id/246" target="_blank">2021年国赛通知</a></span></li>
+			  </ul>
+			  			  <ul class="leader-item4-ul">
+				  <li class="leader-item4-li"><b>·</b><span><a href="https://www.nuedc-training.com.cn/index/card_advance/index" target="_blank">答题赢板卡</a></span></li>
+			  </ul>
+			  			  <ul class="leader-item4-ul">
+				  <li class="leader-item4-li"><b>·</b><span><a href="https://www.nuedc-training.com.cn/index/video/details/course_id/83" target="_blank">TI 杯 2020 年省级全国大学生电子设计竞赛命题专家解析</a></span></li>
+			  </ul>
+			  			  <ul class="leader-item4-ul">
+				  <li class="leader-item4-li"><b>·</b><span><a href="https://www.nuedc-training.com.cn/index/video/details/course_id/76" target="_blank">在疫情期间，如何在家准备电赛？</a></span></li>
+			  </ul>
+			  		  </div>
+      </div>
+    </li>
+   </ul>
+   
+<script>
+	function get_cookie(Name) {
+		var search = Name + "="//查询检索的值
+		var returnvalue = "";//返回值
+		if (document.cookie.length > 0) {
+			sd = document.cookie.indexOf(search);
+			if (sd!= -1) {
+					sd += search.length;
+					end = document.cookie.indexOf(";", sd);
+					if (end == -1)
+					end = document.cookie.length;
+					//unescape() 函数可对通过 escape() 编码的字符串进行解码。
+					returnvalue=unescape(document.cookie.substring(sd, end))
+				}
+		}
+		return returnvalue;
+	}
+
+	if (get_cookie("buyClose")) {
+		$('#openNewBuy').parent().hover(function () {
+			$('#openNewBuy').show()
+		}, function () {
+			$('#openNewBuy').hide()
+		})
+	} else {
+		$('#openNewBuy').removeClass('hide')
+		$('#closeNewBuy,#openNewBuy').show()
+		$('#closeNewBuy').click(function (e) {
+			e.stopPropagation()
+			document.cookie="buyClose=1;domain=.nuedc-training.com.cn;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+			$('#openNewBuy').hide().addClass('hide')
+			$('#closeNewBuy').hide()
+			$('#openNewBuy').parent().hover(function () {
+				$('#openNewBuy').show()
+			}, function () {
+				$('#openNewBuy').hide()
+			})
+			return false
+		})
+	}
+</script>
+
+<!-- <img style="margin-top: -10px" src="https://static.nuedc-training.com.cn/images/huodong/chip/reward-2.png" alt=""> -->
+<!--<link rel="stylesheet" href="https://static.nuedc-training.com.cn/css/huodong/chip/style3.css?=24">-->
+<style>
+    .newsMain-left{
+        float: none!important;
+        margin: 0 auto;
+    }
+    .text-word{
+        font-size: 15px;
+        color: #333;
+        line-height: 25px;
+        margin-top: 15px;
+    }
+
+    .href-box{
+        padding-top: 20px;
+        padding-bottom: 15px;
+        width:480px;
+        margin:0 auto;
+    }
+    .href-box a {
+        position: relative;
+        left:0;
+        top:0;
+        display:block;
+        padding:5px 0 5px 10px;
+        color: #333;
+        text-align:left;
+        /*width: 478px;*/
+        /*height: 41px;*/
+        /*background-color: #ffffff;*/
+        /*!* box-shadow: 0 0 6px 4px rgb(0 0 0 / 5%); *!*/
+        /*font-size: 16px;*/
+        /*line-height: 60px;*/
+        /*border: 1px solid rgb(205, 205, 205);*/
+        /*border-radius: 6px;*/
+    }
+    .href-box-title{
+        background-image:url(../../static/images/invalid-04.png);
+        background-repeat:no-repeat;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 22px;
+        background-position: left center;
+        margin-bottom:6px;
+    }
+    .href-box a:after {
+        content: "·";
+        color: #4683FF;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        font-size: 20px;
+    }
+    .other-href{
+        text-align: center;
+        margin: 70px 0 60px;
+    }
+
+    .other-href .other-href-item{
+        display: inline-block;
+        width: 308px;
+        height: 60px;
+        background-color: #ffffff;
+        /* box-shadow: 0 0 6px 4px rgb(0 0 0 / 5%); */
+        font-size: 16px;
+        line-height: 60px;
+        color: #333;
+        border: 1px solid rgb(205, 205, 205);
+        border-radius: 6px;
+    }
+    .table{
+        color: #333;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 40px;
+    }
+    .table td{
+        padding:3px 5px;
+    }
+    .table td a{
+        text-indent: 5px;
+        display: block;
+    }
+    .evmPart4-time{
+        width: 560px;
+    }
+</style>
+<!--<script src="https://static.nuedc-training.com.cn/js/huodong/chip/jquery.downCount.min.js"></script>-->
+<div class="chip-main">
+    <section class="news-bg">
+        <section class="container">
+            <section class="clearfix">
+                <ul class="news-crumbs clearfix">
+                    <li class="news-crumbs-item"><a href="https://www.nuedc-training.com.cn/index/news/index">全部</a></li>
+                    <li class="video-crumbs-item"><em></em></li>
+                    <li class="news-crumbs-item"><a href="https://www.nuedc-training.com.cn/index/news/index/id/1">官方通知</a></li>
+                    <li class="video-crumbs-item"><em></em></li>
+                    <li class="news-crumbs-item">TI 杯2021年全国大学生电子设计竞赛仪器设备和主要元器件清单</li>
+                </ul>
+            </section>
+            <section class="news-main clearfix">
+                <div class="newsMain-left" style="width:800px">
+                    <div class="newsMain-content" style="padding-bottom: 1px;">
+                        <h2 class="newsMain-content-title" style="font-size: 18px;text-align: center;">TI 杯2021年全国大学生电子设计竞赛仪器设备和主要元器件清单</h2>
+                        <div class="text-word" style="margin-top: 30px;">
+                            为了便于备赛的同学们进行电赛测试设备和元器件的充分准备，组委会特公布“TI 杯2021年全国大学生电子设计竞赛仪器设备和主要元器件清单”，请各位同学及时关注！
+                        </div>
+
+                        <!-- 距申请开始： 状态加上active -->
+                        <div class="evmPart4-time clearfix active" style="margin-top: 50px;" hidden>
+                            <input type="hidden" data-id="time" value="2021/07/28 12:00">
+                            <span class="leftCol">距公开：</span>
+                            <ul data-id="countdown" class="T2Content-time clearfix leftCol">
+                                <li class="leftCol"> <span class="days">00</span></li>
+                                <li class="seperator leftCol">天</li>
+                                <li class="leftCol"> <span class="hours">00</span></li>
+                                <li class="seperator leftCol">时</li>
+                                <li class="leftCol"> <span class="minutes">00</span></li>
+                                <li class="seperator leftCol">分</li>
+                                <li class="leftCol"> <span class="seconds">00</span></li>
+                                <li class="seperator leftCol">秒</li>
+                            </ul>
+                        </div>
+                        <!-- 推荐列表 -->
+                        <table class="table" width="400" align="center" bordercolor="#cdcdcd" style="border-collapse:collapse;" border="1"
+                               cellspacing="0" cellpadding="0" >
+                            <tr>
+                                <td colspan="2" height="36" align="center"><strong>本科组</strong></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="17" align="center" width='100'><p>仪器设备清单</p></td>
+                                <td>数字示波器(100MHz，双通道)</td>
+                            </tr>
+                            <tr>
+                                <td>函数发生器(50 MHz，双通道)</td>
+                            </tr>
+                            <tr>
+                                <td>任意波信号发生器(1MHz)</td>
+                            </tr>
+                            <tr>
+                                <td>频谱分析仪(1GHz)</td>
+                            </tr>
+                            <tr>
+                                <td>频率计(500MHz)</td>
+                            </tr>
+                            <tr>
+                                <td>功率分析仪</td>
+                            </tr>
+                            <tr>
+                                <td>数字毫伏表</td>
+                            </tr>
+                            <tr>
+                                <td>以太网交换机(通用4~24端口百兆/千兆)</td>
+                            </tr>
+                            <tr>
+                                <td>网线通断测试仪</td>
+                            </tr>
+                            <tr>
+                                <td>单片机开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>FPGA 开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>DSP 开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>嵌入式开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>秒表</td>
+                            </tr>
+                            <tr>
+                                <td>量角器</td>
+                            </tr>
+                            <tr>
+                                <td>5米卷尺</td>
+                            </tr>
+                            <tr>
+                                <td>关节角度测量尺</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="37" align="center"><p>主要元器件及器材清单</p></td>
+                                <td>三脚架</td>
+                            </tr>
+                            <tr>
+                                <td>四旋翼飞行器(最大轴距不超过450mm)</td>
+                            </tr>
+                            <tr>
+                                <td>电动小车(外形尺寸:长度≤25cm，宽度≤20cm)</td>
+                            </tr>
+                            <tr>
+                                <td>摄像头(可带处理器模块)</td>
+                            </tr>
+                            <tr>
+                                <td>可编程逻辑器件及其下载板</td>
+                            </tr>
+                            <tr>
+                                <td>嵌入式开发系统板</td>
+                            </tr>
+                            <tr>
+                                <td>TI MCU 系统板(可含板载调试下载模块)</td>
+                            </tr>
+                            <tr>
+                                <td>微处理器最小系统板(可含板载调试下载模块)</td>
+                            </tr>
+                            <tr>
+                                <td>DDS 芯片或模块</td>
+                            </tr>
+                            <tr>
+                                <td>无线发射接收模块</td>
+                            </tr>
+                            <tr>
+                                <td>手机通信模块</td>
+                            </tr>
+                            <tr>
+                                <td>激光笔</td>
+                            </tr>
+                            <tr>
+                                <td>A/D、D/A 转换器</td>
+                            </tr>
+                            <tr>
+                                <td>运算放大器、电压比较器、乘法器</td>
+                            </tr>
+                            <tr>
+                                <td>大功率器件</td>
+                            </tr>
+                            <tr>
+                                <td>大功率电阻(10Ω/200W, 50Ω/30W)</td>
+                            </tr>
+                            <tr>
+                                <td>小容量三相自耦调压器</td>
+                            </tr>
+                            <tr>
+                                <td>三相隔离变压器(300VA, 1:1)</td>
+                            </tr>
+                            <tr>
+                                <td>小型电机及驱动器</td>
+                            </tr>
+                            <tr>
+                                <td>工频电流互感器（10A）</td>
+                            </tr>
+                            <tr>
+                                <td>高频磁环</td>
+                            </tr>
+                            <tr>
+                                <td>自带管理功能 2000~3000mAh 18650 型锂离子电池四节及相应电池盒</td>
+                            </tr>
+                            <tr>
+                                <td>液晶显示屏</td>
+                            </tr>
+                            <tr>
+                                <td>7段数码管</td>
+                            </tr>
+                            <tr>
+                                <td>小型继电器</td>
+                            </tr>
+                            <tr>
+                                <td>变容二极管</td>
+                            </tr>
+                            <tr>
+                                <td>发光二极管</td>
+                            </tr>
+                            <tr>
+                                <td>钕铁硼磁铁圆片(直径 12mm，厚度 2mm)</td>
+                            </tr>
+                            <tr>
+                                <td>光电传感器</td>
+                            </tr>
+                            <tr>
+                                <td>角度传感器</td>
+                            </tr>
+                            <tr>
+                                <td>麦克风</td>
+                            </tr>
+                            <tr>
+                                <td>蜂鸣器</td>
+                            </tr>
+                            <tr>
+                                <td>压电陶瓷蜂鸣片</td>
+                            </tr>
+                            <tr>
+                                <td>扬声器</td>
+                            </tr>
+                            <tr>
+                                <td>超五或六类网线及 RJ45 插头</td>
+                            </tr>
+                            <tr>
+                                <td>空心透明球(塑料球、亚克力球，直径 20~30cm)</td>
+                            </tr>
+                            <tr>
+                                <td>正方形亚克力平板(边长为450mm±10mm;厚度均匀且为8mm±1mm)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" height="36" align="center"><strong>高职高专组</strong></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="10" align="center"><p>仪器设备清单</p></td>
+                                <td>数字示波器( 60MHz，双通道 )</td>
+                            </tr>
+                            <tr>
+                                <td>函数发生器(10 MHz)</td>
+                            </tr>
+                            <tr>
+                                <td>单片机开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>FPGA 开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>DSP 开发系统</td>
+                            </tr>
+                            <tr>
+                                <td>秒表</td>
+                            </tr>
+                            <tr>
+                                <td>量角器</td>
+                            </tr>
+                            <tr>
+                                <td>非接触式转速表</td>
+                            </tr>
+                            <tr>
+                                <td>游标卡尺</td>
+                            </tr>
+                            <tr>
+                                <td>5米卷尺</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="25" align="center"><p>主要元器件及器材清单</p></td>
+                                <td>直流电机及驱动电路</td>
+                            </tr>
+                            <tr>
+                                <td>电动云台</td>
+                            </tr>
+                            <tr>
+                                <td>电动小车(外形尺寸:长度≤25cm,宽度≤20cm)</td>
+                            </tr>
+                            <tr>
+                                <td>舵机（不大于20W）</td>
+                            </tr>
+                            <tr>
+                                <td>摄像头(可带处理器模块)</td>
+                            </tr>
+                            <tr>
+                                <td>微处理器最小系统板(可含板载调试下载模块)</td>
+                            </tr>
+                            <tr>
+                                <td>载波通信模块</td>
+                            </tr>
+                            <tr>
+                                <td>激光笔</td>
+                            </tr>
+                            <tr>
+                                <td>超级电容/法拉电容</td>
+                            </tr>
+                            <tr>
+                                <td>大功率开关管</td>
+                            </tr>
+                            <tr>
+                                <td>大功率二极管</td>
+                            </tr>
+                            <tr>
+                                <td>运算放大器、电压比较器</td>
+                            </tr>
+                            <tr>
+                                <td>小型继电器</td>
+                            </tr>
+                            <tr>
+                                <td>蜂鸣器</td>
+                            </tr>
+                            <tr>
+                                <td>发光二极管</td>
+                            </tr>
+                            <tr>
+                                <td>白光 LED</td>
+                            </tr>
+                            <tr>
+                                <td>液晶显示屏</td>
+                            </tr>
+                            <tr>
+                                <td>超声波探头</td>
+                            </tr>
+                            <tr>
+                                <td>电容传感器</td>
+                            </tr>
+                            <tr>
+                                <td>反射式光电传感器</td>
+                            </tr>
+                            <tr>
+                                <td>透射式光电传感器</td>
+                            </tr>
+                            <tr>
+                                <td>照度传感器件或模块</td>
+                            </tr>
+
+                            <tr>
+                                <td>角度传感器</td>
+                            </tr>
+                            <tr>
+                                <td>激光测距传感器</td>
+                            </tr>
+                            <tr>
+                                <td>实心(或穿孔)塑料珠(颜色:红、绿、蓝、黑、白;直径 20、25、30mm)</td>
+                            </tr>
+                          
+                        </table>
+
+                        <div class="href-box">
+                            <div class="href-box-title">往届仪器设备和主要元器件清单</div>
+                            <a target="_blank" href="https://res.eeyxs.com/21dianyuan/nuedc/202107/20210727082533w54ZNT.pdf"><b>TI 杯2021年全国大学生电子设计竞赛仪器设备和主要元器件清单</b></a>
+                            <a target="_blank" href="https://www.nuedc-training.com.cn/index/news/details/new_id/201">TI 杯2020年省级大学生电子设计竞赛仪器设备和主要元器件清单</a>
+                            <a target="_blank" href="https://www.nuedc-training.com.cn/index/news/details/new_id/145">TI 杯2019年全国大学生电子设计竞赛仪器设备和主要元器件清单</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</div>
+<script>
+    // 倒计时插件
+    $(function () {
+        if ($('[data-id="time"]').length > 0) {
+            $('[data-id="countdown"]').each(function () {
+                $(this).downCount({
+                    date: $(this).siblings('[data-id="time"]').val(),
+                    offset: +8
+                }, function () {
+                    console.log('直播中...')
+                });
+                var d = $(this).siblings('[data-id="time"]').val();
+                console.log(d);
+            })
+        }
+    })
+</script>
+<footer class="footer">
+    <div class="container clearfix">
+      <div class="leftCol">
+        <nav class="footer-nav clearfix">
+          <a class="footer-link" href="https://www.nuedc-training.com.cn/index/common/site" target="_blank">网站介绍</a>
+          <a class="footer-link" href="https://www.nuedc-training.com.cn/index/common/about" target="_blank">联系我们</a>
+          <a class="footer-link" href="https://www.nuedc-training.com.cn/index/common/reg" target="_blank">注册协议</a>
+          <a class="footer-link" href="https://www.nuedc-training.com.cn/index/common/privacy" target="_blank">隐私条款</a>
+            <a class="footer-link" href="https://www.nuedc-training.com.cn/index/common/report" target="_blank">举报</a>
+        </nav>
+        <p class="footer-copyright">
+          Copyright 2018-2021 NUEDC All Rights Reserved. 全国大学生电子设计竞赛组织委员会 版权所有 <a class="footer-reference" href="https://beian.miit.gov.cn/" target="_blank">津ICP备18002217号-1</a>
+        </p>
+      </div>
+      <div class="footer-list rightCol clearfix">
+        <a href="https://www.nuedc-training.com.cn/index/index?form_model=1" class="leftCol footer-item">
+            <img width="50" src="https://static.nuedc-training.com.cn/images/new/foot-icon1.png"/>
+          <p>电脑版</p>
+        </a>
+        <a href="https://www.nuedc-training.com.cn/mobile/index?form_model=2" class="leftCol footer-item">
+            <img width="50" src="https://static.nuedc-training.com.cn/images/new/foot-icon2.png"/>
+            <p>触屏版</p>
+          </a>
+      </div>
+      <!--<div class="footer-wechat">
+        扫描二维码<br>
+        关注电赛微信
+        <img width="80" height="80" class="wechat" src="https://static.nuedc-training.com.cn/images/wechat.jpg" alt="">
+      </div>-->
+    </div>
+  </footer>
+  <div style="display:none"><script src="//s22.cnzz.com/z_stat.php?id=1274193147&web_id=1274193147" language="JavaScript"></script>
+  <script src="https://res.nuedc-training.com.cn/cnzz_ext.min.js" language="JavaScript"></script>
+  <script>
+    var isuser_this = news_id;
+    if(isuser_this != ''){
+         window.onload = function() {
+        // console.log(_czc);
+        _czc.push(['_trackPageview', "https://www.nuedc-training.com.cn/index/news/details/new_id/'+isuser_this, ""]);
+      };
+    }
+  </script>
+</div>
+  <script async="async" src="//www.ti.com/assets/js/headerfooter/analytics.js"></script>
+  <script src="https://static.nuedc-training.com.cn/js/jquery.downCount.min.js"></script>
+ <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.downCount/1.0.0/jquery.downCount.min.js"></script>-->
+  <script src="https://static.nuedc-training.com.cn/js/player3.2.0/player/cyberplayer.js"></script>
+  <script src="https://static.nuedc-training.com.cn/js/select_area_zh-cn.js"></script>
+  <script src="https://static.nuedc-training.com.cn/js/simple-share.min.js"></script>
+  <script src="https://www.nuedc-training.com.cn/static/js/GZApp.min.js?v=4"></script>
+  <script>
+//  $(function () {
+//    if ($("#searchForm").length) {
+//      var $form = $("#searchForm").Validform({
+//        tiptype: 4,
+//        ignoreHidden: true,
+//        ajaxPost: false,
+//        beforeSumbmit: function () {
+//        
+//        },
+//        callback: function (data) {
+//
+//        }
+//      })
+//    }
+//    if ($('#bannerWrap').length) {
+//      var banner = new window.GZApp.Scroll({
+//        mainWrap: '#bannerWrap',
+//        auto: true,
+//        speed: 0.5,
+//        tagWrap: '#bannerTab2'
+//      })
+//      banner.showHide();
+//    }
+//  })
+  </script>
+  <script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?602847cbdad9ab47a063c229686a77e3":"https://jspassport.ssl.qhimg.com/11.0.1.js?602847cbdad9ab47a063c229686a77e3";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+  <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
